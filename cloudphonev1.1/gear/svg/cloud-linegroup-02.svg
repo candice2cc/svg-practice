@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="285" height="237" viewBox="0 0 285 237">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #c0c9d3;
+        stroke-dasharray: 0.001, 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+        fill: none;
+        fill-rule: evenodd;
+      }
+    .draw,.draw-reverse {
+        stroke-width: 1.1px;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: paused;
+        animation-fill-mode: forwards;
+        animation-duration: 4s;
+        stroke-dasharray:492.2589111328125,492.2589111328125;
+        stroke-dashoffset:492.2589111328125;
+    }
+    .draw{
+        animation-name: pathDraw;
+        animation-delay: 200ms;
+    }
+    @keyframes pathDraw {
+        0% {
+            stroke-dashoffset: 492.2589111328125;
+        }
+        25%{
+            stroke-dashoffset: 0;
+        }
+        26%{
+            stroke-dashoffset: 492.2589111328125;
+        }
+        100%{
+            stroke-dashoffset: 492.2589111328125;
+        }
+
+    }
+    .draw-reverse{
+        animation-name: pathDrawReverse;
+        animation-delay: 1s;
+    }
+    @keyframes pathDrawReverse {
+        0% {
+            stroke-dashoffset: 0;
+        }
+        25%{
+            stroke-dashoffset: 492.2589111328125;
+        }
+        26%{
+            stroke-dashoffset: 492.2589111328125;
+        }
+        100%{
+            stroke-dashoffset: 492.2589111328125;
+        }
+    }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1 draw" d="M40.094,1.750 C40.094,1.750 -16.906,26.750 8.094,54.750 C33.094,82.750 223.311,33.339 274.094,108.750 C307.449,158.281 241.094,234.750 241.094,234.750 " />
+    <path class="cls-1 draw-reverse" d="M241.094,234.750 C241.094,234.750 307.449,158.281 274.094,108.750 C223.311,33.339 33.094,82.750 8.094,54.750 C-16.906,26.750 40.094,1.750 40.094,1.750 "/>
+    <path class="cls-1" d="M40.094,1.750 C40.094,1.750 -16.906,26.750 8.094,54.750 C33.094,82.750 223.311,33.339 274.094,108.750 C307.449,158.281 241.094,234.750 241.094,234.750 " />
+
+  </g>
+</svg>

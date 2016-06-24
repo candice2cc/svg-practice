@@ -1,0 +1,24 @@
+body {
+    height: 2000px;
+    margin: 0;
+}
+
+.wd-1120 {
+    width: 1120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#screenMedia {
+    background: #f7f8fa;
+}
+
+#screenMedia .wd-1120 {
+    height: 960px;
+    position: relative;
+}
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1120">
+    <title>云手机第三屏</title>
+
+    <link rel="stylesheet" href="css/gear.css">
+    <link rel="stylesheet" href="demo.css">
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+<section id="screenGear">
+    <div class="wd-1120 container">
+        <div id="gearComponents">
+
+            <object class="gear-item gear-center svg" data="svg/cloud-gear-group-1.svg"
+                    type="image/svg+xml"></object>
+            <object class="gear-item gear-left svg" data="svg/cloud-gear-group-2.svg"
+                    type="image/svg+xml"></object>
+            <object class="gear-item gear-right svg" data="svg/cloud-gear-group-3.svg"
+                    type="image/svg+xml"></object>
+
+            <object class="phone-line svg" data="svg/phone-line.svg"
+            type="image/svg+xml"></object>
+            <object class="phone-flat svg" data="svg/phone-flat.svg"
+                    type="image/svg+xml"></object>
+            <object class="phone-screen svg" data="svg/cloud-mission.svg"
+                    type="image/svg+xml"></object>
+           
+
+            <object class="cloud-line cloud-line-left svg" data="svg/cloud-linegroup-01.svg"
+                    type="image/svg+xml"></object>
+            <object class="cloud-line cloud-line-center svg" data="svg/cloud-linegroup-02.svg"
+                    type="image/svg+xml"></object>
+            <object class="cloud-line cloud-line-right svg" data="svg/cloud-linegroup-03.svg"
+                    type="image/svg+xml"></object>
+        </div>
+
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="js/gear_animation.js"></script>
+<script>
+
+    //加速
+    var start = new Date();
+    document.addEventListener("DOMContentLoaded", function (event) {
+        //do work
+        console.log(new Date() - start);
+        var gearAnimation = new GearAnimation(document.getElementById('gearComponents'));
+        gearAnimation.animate();
+    });
+</script>
+</body>
+</html>

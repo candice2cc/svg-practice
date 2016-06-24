@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="364" height="285" viewBox="0 0 364 285">
+  <defs>
+    <style>
+        .cls-1 {
+            stroke: #c0c9d3;
+            stroke-dasharray: 0.001, 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1px;
+            fill: none;
+            fill-rule: evenodd;
+        }
+        .draw,.draw-reverse {
+              stroke-width: 1.1px;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+              animation-direction: normal;
+              animation-play-state: paused;
+              animation-fill-mode: forwards;
+              animation-duration: 6000ms;
+              stroke-dasharray:607.795166015625,607.795166015625;
+              stroke-dashoffset:607.795166015625;
+          }
+          .draw{
+              animation-name: pathDraw;
+              animation-delay: 200ms;
+          }
+          @keyframes pathDraw {
+              0% {
+                  stroke-dashoffset: 607.795166015625;
+              }
+              25%{
+                  stroke-dashoffset: 0;
+              }
+              26%{
+                  stroke-dashoffset: 607.795166015625;
+              }
+              100%{
+                  stroke-dashoffset: 607.795166015625;
+              }
+
+          }
+          .draw-reverse{
+              animation-name: pathDrawReverse;
+              animation-delay: 1500ms;
+          }
+          @keyframes pathDrawReverse {
+              0% {
+                  stroke-dashoffset: 0;
+              }
+              25%{
+                  stroke-dashoffset: 607.795166015625;
+              }
+              26%{
+                  stroke-dashoffset: 607.795166015625;
+              }
+              100%{
+                  stroke-dashoffset: 607.795166015625;
+              }
+          }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1 draw" d="M25.634,1.750 C-3.392,22.032 -22.321,101.394 69.591,129.295 C161.504,157.195 300.203,81.380 343.330,130.291 C386.457,179.202 340.333,281.750 340.333,281.750 " />
+    <path class="cls-1 draw-reverse" d="M340.333,281.750 C340.333,281.750 386.457,179.202 343.330,130.291 C300.203,81.380 161.504,157.195 69.591,129.295 C-22.321,101.394 -3.392,22.032 25.634,1.750 " />
+    <path class="cls-1" d="M25.634,1.750 C-3.392,22.032 -22.321,101.394 69.591,129.295 C161.504,157.195 300.203,81.380 343.330,130.291 C386.457,179.202 340.333,281.750 340.333,281.750 " />
+
+  </g>
+</svg>

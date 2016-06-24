@@ -1,0 +1,151 @@
+#pathAnimation {
+    width: 70em;
+    height: 26.75em;
+    position: relative;
+    visibility: hidden;
+    font-size: 16px;
+
+}
+
+#pathAnimation .phone {
+    display: block;
+    position: relative;
+    margin: auto;
+}
+#pathAnimation .video-mp4{
+    position: absolute;
+    width: 190px;
+    height: 354px;
+    left:29.0625em;
+    top:2.1875em;
+}
+#pathAnimation .video-control{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    left:33.4375em;
+    bottom:5.25em;
+
+}
+#pathAnimation .video-control .replay{
+    cursor: pointer;
+}
+#pathAnimation .video-control .replay,
+#pathAnimation .video-control .loading{
+    display: none;
+}
+
+
+#pathAnimation .letter {
+    position: absolute;
+    left: 4.625em;
+    top: 9.75em;
+}
+
+#pathAnimation .newspaper {
+    position: absolute;
+    left: 19.625em;
+    top: 1.875em;
+}
+
+#pathAnimation .bustop {
+    position: absolute;
+    left: 15.1875em;
+    top: 19.25em;
+}
+
+#pathAnimation .outdoor {
+    position: absolute;
+    left: 21.5625em;
+    top: 9.4375em;
+}
+
+#pathAnimation .msg {
+    position: absolute;
+    left: 15em;
+    top: 7.625em;
+}
+
+#pathAnimation .cup {
+    position: absolute;
+    left: 8.75em;
+    top: 17.125em;
+}
+
+#pathAnimation .video {
+    position: absolute;
+    top: 8.875em;
+    right: 13.5625em;
+}
+
+#pathAnimation .speaker {
+    position: absolute;
+    top: 3.375em;
+    right: 19.75em;
+}
+
+#pathAnimation .shirt {
+    position: absolute;
+    top: 6.5em;
+    right: 5.875em;
+}
+
+#pathAnimation .mail {
+    position: absolute;
+    top: 14.625em;
+    right: 4.625em;
+}
+
+#pathAnimation .tv {
+    position: absolute;
+    top: 19em;
+    right: 15.0em;
+}
+
+#pathAnimation object.later {
+    visibility: hidden;
+}
+/**
+
+**/
+#pathAnimation .scene{
+    width: 100%;
+    height: 26.75em;
+    top:0;
+}
+#pathAnimation .scene:nth-child(2){
+    top:-26.75em;
+}
+#pathAnimation .scene:nth-child(3){
+    top:-53.5em;
+}
+#pathAnimation .scene:nth-child(4){
+    top:-80.25em;
+}
+#pathAnimation .scene:nth-child(5){
+    top:-107.0em;
+}
+#pathAnimation .scene:nth-child(6){
+    top:-133.75em;
+}
+#pathAnimation .scene:nth-child(7){
+    top:-160.5em;
+}
+#pathAnimation .scene:nth-child(8){
+    top:-187.25em;
+}
+#pathAnimation .scene:nth-child(9){
+    top:-214.0em;
+}
+
+#pathAnimation .scene:nth-child(10){
+    top:-240.75em;
+}
+#pathAnimation .scene:nth-child(11){
+    top:-267.5em;
+}
+#pathAnimation .scene:nth-child(12){
+    top:-294.25em;
+}
+

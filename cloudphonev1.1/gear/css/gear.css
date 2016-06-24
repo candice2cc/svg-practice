@@ -1,0 +1,62 @@
+#gearComponents{
+    position: relative;
+    visibility: hidden;
+    font-size: 16px;
+}
+#gearComponents .gear-center{
+    display: block;
+    margin: auto;
+}
+#gearComponents .gear-left{
+    position: absolute;
+    left:6em;
+    top:2.875em;
+}
+#gearComponents .gear-right{
+    position: absolute;
+    right: 6em;
+    top:4em;
+}
+
+#gearComponents .phone-line,
+#gearComponents .phone-flat,
+#gearComponents .phone-screen{
+    opacity: 0;
+    transition: opacity 800ms linear 0ms;
+}
+#gearComponents .phone-line,
+#gearComponents .phone-flat{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top:360px;
+    left: 0;
+    right: 0;
+}
+#gearComponents .phone-flat{
+    top:356px;
+}
+#gearComponents .phone-screen{
+    display: block;
+    position: absolute;
+    top:364px;
+    left: 245px;
+}
+
+#gearComponents .cloud-line-center{
+    display: block;
+    position: absolute;
+    left: 445px;
+    top:185px;
+
+}
+#gearComponents .cloud-line-left{
+    position: absolute;
+    left:140px;
+    top:120px;
+}
+#gearComponents .cloud-line-right{
+    position: absolute;
+    right: 160px;
+    top:118px;
+}
