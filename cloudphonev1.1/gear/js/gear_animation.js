@@ -150,7 +150,7 @@
                 self.animate.apply(self, []);
             };
         } else {
-            this.element.style.visibility = 'visible';
+            this.element.style.opacity = '1';
             //齿轮转动
             this.gearSVG.forEach(function (gear, i) {
                 gear.animate();
