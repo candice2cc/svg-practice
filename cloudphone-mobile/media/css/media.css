@@ -19,7 +19,7 @@
 #mediaAnimation {
     font-size: 16px;
     width: 22.5em;
-    height: 26em;
+    height: 27.5em;
     overflow-x: hidden; /* 禁止横向滚动*/
     position: relative;
     visibility: hidden;
@@ -83,39 +83,39 @@
 }
 
 #mediaAnimation .newspaper {
-    top: 0;
+    top: 1em;
     left: 7.125em;
 }
 
 #mediaAnimation .bustop {
-    top: 20.0em;
+    top: 21.0em;
     left: 3.875em;
 }
 
 #mediaAnimation .letter {
     left: 0.625em;
-    top: 7.25em;
+    top: 8.25em;
 }
 
 #mediaAnimation .outdoor {
     left: 2.375em;
-    top: 12.625em;
+    top: 13.625em;
 }
 
 #mediaAnimation .msg {
     left: 3.25em;
-    top: 2.25em;
+    top: 3.25em;
 }
 
 #mediaAnimation .cup {
     left: -1.5em;
-    top: 12.0em;
+    top: 13.0em;
 }
 
 /* PHONE*/
 #mediaAnimation .phone {
     left: 7.375em;
-    top: 4.25em;
+    top: 5.25em;
     width: 7.75em;
 !important;
     height: 15.0em;
@@ -127,7 +127,7 @@
     width: 6.5625em;
     height: 12.375em;
     left: 7.95em;
-    top: 5.5em;
+    top: 6.5em;
 
 }
 
@@ -159,26 +159,26 @@
 /* RIGHT*/
 #mediaAnimation .video {
     right: 0.5em;
-    top: 12.875em;
+    top: 13.875em;
 }
 
 #mediaAnimation .speaker {
     right: 5.5em;
-    top: 0.625em;
+    top: 1.625em;
 }
 
 #mediaAnimation .mail {
     right: 1em;
-    top: 1.75em;
+    top: 2.75em;
 }
 
 #mediaAnimation .tv {
     right: -2em;
-    top: 6.75em;
+    top: 7.75em;
 }
 
 #mediaAnimation .shirt {
-    top: 21.25em;
+    top: 22.25em;
     right: 5.84375em;
 }
 

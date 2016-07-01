@@ -130,7 +130,6 @@
         });
     };
     MediaAnimation.prototype.onDeviceOrientation = function () {
-        alert('onDeviceOrientation');
         if (this.isPortrait === this.getScreenOrientation()) {
             return;
         }
@@ -163,7 +162,6 @@
 
     MediaAnimation.prototype.startVideo = function () {
         this.videoEl.startVideo();
-        //this.videoEl.startPlay();
     };
 
 
@@ -321,6 +319,7 @@
         this.replayEl = this.controlEl.getElementsByClassName('replay')[0];
 
         //STATE
+        this.clickPlayState = false;
 
 
         this.init();
@@ -330,7 +329,9 @@
     VideoEl.prototype.init = function () {
         this.clickPlay = this.clickPlay.bind(this);
         this.timeUpdate = this.timeUpdate.bind(this);
+        this.screen.addEventListener('click', this.clickPlay);
         this.replayEl.addEventListener('click', this.clickPlay);
+
     };
     VideoEl.prototype.timeUpdate = function (event) {
         if (this.video.currentTime > 0) {
@@ -342,14 +343,19 @@
     };
 
     VideoEl.prototype.clickPlay = function (event) {
-        //开始缓冲
-        this.showLoading();
-        this.video.play();
+        if(!this.clickPlayState){
+            this.clickPlayState = true;
+            //开始缓冲
+            this.showLoading();
+            this.video.play();
+        }
+
     };
 
     VideoEl.prototype.realStartPlay = function () {
         console.log('realStartPlay');
         this.showReplay();
+        this.clickPlayState = false;
     };
     VideoEl.prototype.showLoading = function () {
         if (this.replayEl.style.display !== 'none') {
