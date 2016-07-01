@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title></title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+        }
+
+        #screenMedia {
+            background: #f7f8fa;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<section id="screenMedia">
+    <div id="mediaAnimation">
+
+        <div class="scene">
+            <div class="layer" data-depth="0.25">
+                <object class="bustop svg" data="svg/media-bustop.svg"
+                        type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.25">
+                <object class="letter svg" data="svg/media-letter.svg" type="image/svg+xml"></object>
+
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.10">
+                <object class="newspaper svg" data="svg/media-newspaper.svg" type="image/svg+xml"></object>
+
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.25">
+                <object class="outdoor svg" data="svg/media-outdoor.svg" type="image/svg+xml"></object>
+
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.10">
+                <object class="msg svg" data="svg/media-msg.svg" type="image/svg+xml"></object>
+
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.10">
+                <object class="cup svg" data="svg/media-cup.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+
+        <!-- 右侧-->
+        <div class="scene">
+            <div class="layer" data-depth="0.25">
+                <object class="video svg" data="svg/media-video.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.15">
+                <object class="speaker svg" data="svg/media-speaker.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.10">
+                <object class="shirt svg" data="svg/media-shirt.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.10">
+                <object class="mail svg" data="svg/media-mail.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.25">
+                <object class="tv svg" data="svg/media-tv.svg" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="layer" data-depth="0.00">
+                <object class="phone svg" data-draw-delay="500" data="svg/media-phone.svg"
+                        type="image/svg+xml"></object>
+                <div class="video-container">
+                    <img class="screen m-fade" src="img/video-screen.png">
+                    <!--<video class="video" preload="preload">-->
+                        <!--<source src="video/video.mp4" type="video/mp4">-->
+                        <!--<source src="video/video.webm" type="video/webm">-->
+                        <!--<source src="video/video.ogg" type="video/ogg">-->
+                        <!--<source src="video/video.mov" type="video/mov">-->
+                    <!--</video>-->
+                    <div class="video-control">
+                        <object class="loading" data="svg/ring.svg"
+                                type="image/svg+xml"></object>
+                        <img class="replay" src="svg/icon-replay.svg"/>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/parallax.min.js"></script>
+<script src="js/media_animation.js"></script>
+<script>
+    //    noxSdk.onLoadSuccess();
+
+    //加速
+    var start = new Date();
+    document.addEventListener("DOMContentLoaded", function (event) {
+        console.log(new Date() - start);
+        new MediaAnimation(document.getElementById('mediaAnimation'));
+
+
+    });
+</script>
+
+</body>
+</html>
