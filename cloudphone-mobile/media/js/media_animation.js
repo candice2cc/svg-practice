@@ -82,6 +82,14 @@
     };
 
     /**
+     * TODO
+     */
+    MediaAnimation.prototype.disable = function(){
+
+
+    };
+
+    /**
      * 基于字体大小缩放
      */
     MediaAnimation.prototype.scale = function () {
@@ -251,6 +259,8 @@
 
         //SVG需要按比例缩小到0.75(phone除外)，且使用em单位，响应fontSize缩放方案
         if (!MediaAnimation.prototype.hasClass(this.element, 'phone')) {
+            this.element.style.width = "";
+            this.element.style.height = "";
             this.width = parseFloat(MediaAnimation.prototype.getStyle(this.element, 'width')) * 0.75;
             this.height = parseFloat(MediaAnimation.prototype.getStyle(this.element, 'height')) * 0.75;
             this.element.style.width = this.width / this.fontSizeDefault + 'em';
