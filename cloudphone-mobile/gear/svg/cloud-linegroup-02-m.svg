@@ -1,0 +1,70 @@
+<svg id="cloud-linegroup-02-m" xmlns="http://www.w3.org/2000/svg" width="190.688" height="220.59"
+     viewBox="0 0 190.688 220.59">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #c0c9d3;
+            stroke-linecap: round;
+            stroke-width: 1.5px;
+            stroke-dasharray: 0.001 3;
+            fill-rule: evenodd;
+            }
+
+            .draw,.draw-r {
+            stroke-width: 1.5px;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-duration: 6000ms;
+            stroke-dasharray:358.97381591796875,358.97381591796875;
+            stroke-dashoffset:358.97381591796875;
+            }
+            .draw{
+            animation-name: pathDraw;
+            animation-delay: 200ms;
+            }
+            @keyframes pathDraw {
+            0% {
+            stroke-dashoffset: 358.97381591796875;
+            }
+            25%{
+            stroke-dashoffset: 0;
+            }
+            26%{
+            stroke-dashoffset: 358.97381591796875;
+            }
+            100%{
+            stroke-dashoffset: 358.97381591796875;
+            }
+
+            }
+            .draw-r{
+            animation-name: pathDrawReverse;
+            animation-delay: 1500ms;
+            }
+            @keyframes pathDrawReverse {
+            0% {
+            stroke-dashoffset: 0;
+            }
+            25%{
+            stroke-dashoffset: 358.97381591796875;
+            }
+            26%{
+            stroke-dashoffset: 358.97381591796875;
+            }
+            100%{
+            stroke-dashoffset: 358.97381591796875;
+            }
+            }
+        </style>
+    </defs>
+    <path id="cloud-line-02a" class="cls-1 draw" d="M300,1682s49,50,13,93-175.272-44.22-176.008,128"
+          transform="translate(-136.25 -1681.25)"/>
+    <path id="cloud-line-02b" class="cls-1 draw-r" d="M136.99,1903C137.726,1730.78,277,1818,313,1775s-13-93-13-93" transform="translate(-136.25 -1681.25)"/>
+    <path id="cloud-line-02a" class="cls-1" d="M300,1682s49,50,13,93-175.272-44.22-176.008,128"
+          transform="translate(-136.25 -1681.25)"/>
+
+</svg>

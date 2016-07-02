@@ -1,0 +1,91 @@
+.g-fade {
+    transition: opacity 600ms linear 0ms;
+    opacity: 0;
+}
+
+.g-fade.g-fade-in {
+    opacity: 1;
+!important;
+}
+
+.g-fade.g-fade-out {
+    opacity: 0;
+!important;
+}
+
+#gearAnimation {
+    font-size: 16px;
+    width: 22.5em;
+    height: 22em;
+    overflow-x: hidden; /* 禁止横向滚动*/
+    position: relative;
+}
+
+#gearAnimation .gear-left {
+    position: absolute;
+    width: 18.5625em;
+    height: 7.75em;
+    left: -1em;
+    top: 3.5em;
+}
+
+#gearAnimation .gear-right {
+    position: absolute;
+    width: 9.6875em;
+    height: 5.375em;
+    left: 10em;
+    top: 0;
+}
+
+#gearAnimation .phone-line {
+    position: absolute;
+    top: 16.375em;
+    left: 0;
+    right: 0;
+    width: 19.75em;
+    height: 4.625em;
+    margin: auto;
+}
+
+#gearAnimation .phone-flat {
+    position: absolute;
+    top: 16.375em;
+    left: 0;
+    right: 0;
+    width: 20.0625em;
+    height: 4.9375em;
+    margin: auto;
+
+}
+
+#gearAnimation .phone-screen {
+    position: absolute;
+    top: 16.5625em;
+    left: 0;
+    right: 0;
+    width: 17.0em;
+    height: 3.625em;
+    margin: auto;
+}
+
+#gearAnimation .cloud-line-left {
+    position: absolute;
+    left: 4.75em;
+    top: 10em;
+}
+
+#gearAnimation .cloud-line-right {
+    position: absolute;
+    right: 4em;
+    top: 4em;
+}
+
+#gearAnimation .cloud-line-left{
+    width: 8.5em;
+    height: 7.72em;
+
+}
+#gearAnimation .cloud-line-right{
+    width: 12em;
+    height: 13.79em;
+}
