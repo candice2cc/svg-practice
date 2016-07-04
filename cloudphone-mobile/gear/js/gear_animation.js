@@ -204,7 +204,7 @@
     };
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    var isSafari = u.indexOf('Safari') > -1 && u.indexOf('Chrome') <= -1;
+    var isSafari = u.indexOf('Safari') > -1 || u.indexOf('AppleWebkit') <= -1;
     //get androidVersion
     var androidVersion = -1;
     if (isAndroid) {
