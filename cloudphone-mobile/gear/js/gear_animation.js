@@ -106,6 +106,12 @@
      */
     GearAnimation.prototype.enableAnimation = function () {
         var self = this;
+        //safari fix
+        if(isSafari){
+            self.phonePlatSVG.getSVGDocument().getElementsByClassName('cls-safari-fix')[0].style.display = 'block';
+        }
+
+
         self.fadeIn(self.element);
         for (var i = 0, l = self.gearSVGs.length; i < l; i++) {
             self.animateSVG(self.gearSVGs[i], '.gear-m');
@@ -200,6 +206,7 @@
     };
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+    var isSafari = u.indexOf('Safari') > -1 && u.indexOf('Chrome') <= -1;
     // Expose MediaAnimation
     window[NAME] = GearAnimation;
 
