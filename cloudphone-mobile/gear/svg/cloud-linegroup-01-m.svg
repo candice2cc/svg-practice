@@ -12,18 +12,41 @@
             }
             .draw,.draw-r {
             stroke-width: 1.5px;
+            -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
             animation-direction: normal;
+            -webkit-animation-play-state: running;
             animation-play-state: running;
+            -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+            -webkit-animation-duration: 4000ms;
             animation-duration: 4000ms;
             stroke-dasharray:253.76278686523438,253.76278686523438;
             stroke-dashoffset:253.76278686523438;
             }
             .draw{
+            -webkit-animation-name: pathDraw;
             animation-name: pathDraw;
+            -webkit-animation-delay: 200ms;
             animation-delay: 200ms;
+            }
+            @-webkit-keyframes pathDraw {
+            0% {
+            stroke-dashoffset: 253.76278686523438;
+            }
+            25%{
+            stroke-dashoffset: 0;
+            }
+            26%{
+            stroke-dashoffset: 253.76278686523438;
+            }
+            100%{
+            stroke-dashoffset: 253.76278686523438;
+            }
+
             }
             @keyframes pathDraw {
             0% {
@@ -41,8 +64,24 @@
 
             }
             .draw-r{
+            -webkit-animation-name: pathDrawReverse;
             animation-name: pathDrawReverse;
+            -webkit-animation-delay: 1000ms;
             animation-delay: 1000ms;
+            }
+            @-webkit-keyframes pathDrawReverse {
+            0% {
+            stroke-dashoffset: 0;
+            }
+            25%{
+            stroke-dashoffset: 253.76278686523438;
+            }
+            26%{
+            stroke-dashoffset: 253.76278686523438;
+            }
+            100%{
+            stroke-dashoffset: 253.76278686523438;
+            }
             }
             @keyframes pathDrawReverse {
             0% {

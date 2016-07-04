@@ -1,16 +1,15 @@
 .g-fade {
+    -webkit-transition: opacity 600ms linear 0ms;
     transition: opacity 600ms linear 0ms;
     opacity: 0;
 }
 
 .g-fade.g-fade-in {
-    opacity: 1;
-!important;
+    opacity: 1;!important;
 }
 
 .g-fade.g-fade-out {
-    opacity: 0;
-!important;
+    opacity: 0;!important;
 }
 
 #gearAnimation {

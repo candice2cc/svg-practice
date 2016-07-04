@@ -1,90 +1,153 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="140" height="76" viewBox="0 0 140 76">
   <defs>
     <style>
-      .cls-1, .cls-2, .cls-4 {
+        .cls-1, .cls-2, .cls-4 {
         stroke: #c0c9d3;
-      }
+        }
 
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
         stroke-linecap: round;
         stroke-linejoin: round;
         fill: none;
-      }
+        }
 
-      .cls-1, .cls-2, .cls-3 {
+        .cls-1, .cls-2, .cls-3 {
         stroke-width: 0.83px;
-      }
+        }
 
-      .cls-2, .cls-3, .cls-4, .cls-5 {
+        .cls-2, .cls-3, .cls-4, .cls-5 {
         fill-rule: evenodd;
-      }
+        }
 
-      .cls-3, .cls-5 {
+        .cls-3, .cls-5 {
         stroke: #cae0f6;
-      }
+        }
 
-      .cls-4, .cls-5 {
+        .cls-4, .cls-5 {
         stroke-width: 1.66px;
-      }
-      .gear-m{
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-          animation-direction: normal;
-          animation-play-state: running;
-          animation-fill-mode: forwards;
-      }
-      @keyframes rotateAnim {
-          0%{
-              transform: rotate(0deg);
-          }
-          50%{
-              transform: rotate(180deg);
-          }
-          100%{
-              transform: rotate(360deg);
-          }
-      }
-      @keyframes rotateReverseAnim {
-          0%{
-              transform: rotate(0deg);
-          }
-          50%{
-              transform: rotate(-180deg);
-          }
-          100%{
-              transform: rotate(-360deg);
-          }
-      }
-      .gear-1{
-          animation-name:rotateAnim;
-          animation-duration: 6s;
-          transform-origin:29px 59px;
-      }
-      .gear-2{
-          animation-name:rotateReverseAnim;
-          animation-duration: 8s;
-          transform-origin:60px 31px;
-      }
-      .gear-3{
-          animation-name:rotateAnim;
-          animation-duration: 6s;
-          transform-origin:99px 60px;
-      }
-      .gear-4{
-          animation-name:rotateAnim;
-          animation-duration: 6s;
-          transform-origin:104px 28px
-      }
-      .gear-5{
-          animation-name:rotateReverseAnim;
-          animation-duration: 6s;
-          transform-origin:151.5px 55.5px;
-      }
-      .gear-inner-1{
-          animation-name:rotateReverseAnim;
-          animation-duration:8s;
-          transform-origin:49px 39px;
-      }
+        }
+        .gear-m{
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        }
+        @-webkit-keyframes rotateAnim {
+        0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        }
+        50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        }
+        100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        }
+        }
+        @keyframes rotateAnim {
+        0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        }
+        50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        }
+        100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        }
+        }
+        @-webkit-keyframes rotateReverseAnim {
+        0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        }
+        50%{
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        }
+        100%{
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        }
+        }
+        @keyframes rotateReverseAnim {
+        0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        }
+        50%{
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        }
+        100%{
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+        }
+        }
+        .gear-1{
+        -webkit-animation-name:rotateAnim;
+        animation-name:rotateAnim;
+        -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+        -webkit-transform-origin:29px 59px;
+        -ms-transform-origin:29px 59px;
+        transform-origin:29px 59px;
+        }
+        .gear-2{
+        -webkit-animation-name:rotateReverseAnim;
+        animation-name:rotateReverseAnim;
+        -webkit-animation-duration: 8s;
+        animation-duration: 8s;
+        -webkit-transform-origin:60px 31px;
+        -ms-transform-origin:60px 31px;
+        transform-origin:60px 31px;
+        }
+        .gear-3{
+        -webkit-animation-name:rotateAnim;
+        animation-name:rotateAnim;
+        -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+        -webkit-transform-origin:99px 60px;
+        -ms-transform-origin:99px 60px;
+        transform-origin:99px 60px;
+        }
+        .gear-4{
+        -webkit-animation-name:rotateAnim;
+        animation-name:rotateAnim;
+        -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+        -webkit-transform-origin:104px 28px;
+        -ms-transform-origin:104px 28px;
+        transform-origin:104px 28px
+        }
+        .gear-5{
+        -webkit-animation-name:rotateReverseAnim;
+        animation-name:rotateReverseAnim;
+        -webkit-animation-duration: 6s;
+        animation-duration: 6s;
+        -webkit-transform-origin:151.5px 55.5px;
+        -ms-transform-origin:151.5px 55.5px;
+        transform-origin:151.5px 55.5px;
+        }
+        .gear-inner-1{
+        -webkit-animation-name:rotateReverseAnim;
+        animation-name:rotateReverseAnim;
+        -webkit-animation-duration:8s;
+        animation-duration:8s;
+        -webkit-transform-origin:49px 39px;
+        -ms-transform-origin:49px 39px;
+        transform-origin:49px 39px;
+        }
     </style>
   </defs>
   <g>

@@ -158,6 +158,7 @@
     GearAnimation.prototype.animateSVG = function (svgEl, selector) {
         [].slice.call(svgEl.getSVGDocument().querySelectorAll(selector)).forEach(function (path, i) {
             path.style.animationPlayState = 'running';
+            path.style.webkitAnimationPlayState = 'running';
         });
 
     };
@@ -170,12 +171,9 @@
      */
     GearAnimation.prototype.scale = function () {
         //return; //TODO
+        //alert(window.innerWidth);
         var fontSize;
-        if (this.isPortrait) {
-            fontSize = screen.width * this.fontSizeDefault / this.widthDefault;
-        } else {
-            fontSize = screen.height * this.fontSizeDefault / this.widthDefault;
-        }
+        fontSize = window.innerWidth * this.fontSizeDefault / this.widthDefault;
         this.element.style.fontSize = fontSize + 'px';
     };
 
@@ -185,6 +183,10 @@
         }
         this.isPortrait = this.getScreenOrientation();
         this.scale();
+        if (isAndroid) {
+            location.reload(false);
+        }
+
 
     };
 
@@ -196,7 +198,8 @@
             return false;
         }
     };
-
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
     // Expose MediaAnimation
     window[NAME] = GearAnimation;
 

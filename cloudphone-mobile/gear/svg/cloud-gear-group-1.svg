@@ -2,101 +2,164 @@
     <defs>
         <style>
             .cls-1, .cls-2, .cls-4 {
-                stroke: #c0c9d3;
+            stroke: #c0c9d3;
             }
 
             .cls-1, .cls-2, .cls-3, .cls-4, .cls-6 {
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
             }
 
             .cls-1, .cls-2, .cls-6 {
-                stroke-width: 3px;
+            stroke-width: 3px;
             }
 
             .cls-1 {
-                stroke-dasharray: 8,4;
-                opacity: 0.2;
+            stroke-dasharray: 8,4;
+            opacity: 0.2;
             }
 
             .cls-1, .cls-2, .cls-3, .cls-6 {
-                fill-rule: evenodd;
+            fill-rule: evenodd;
             }
 
             .cls-3, .cls-6 {
-                stroke: #cae0f6;
+            stroke: #cae0f6;
             }
 
             .cls-3, .cls-4 {
-                stroke-width: 1.5px;
+            stroke-width: 1.5px;
             }
 
             .cls-5 {
-                fill: #f7f8fa;
+            fill: #f7f8fa;
             }
             .cloud{
-                stroke-dasharray: 0.001, 4;
+            stroke-dasharray: 0.001, 4;
             }
             .gear-m{
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                animation-direction: normal;
-                animation-play-state: running;
-                animation-fill-mode: forwards;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-direction: normal;
+            animation-direction: normal;
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            }
+            @-webkit-keyframes rotateAnim {
+            0%{
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            50%{
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            }
+            100%{
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            }
             }
             @keyframes rotateAnim {
-                0%{
-                    transform: rotate(0deg);
-                }
-                50%{
-                    transform: rotate(180deg);
-                }
-                100%{
-                    transform: rotate(360deg);
-                }
+            0%{
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            50%{
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            }
+            100%{
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            }
+            }
+            @-webkit-keyframes rotateReverseAnim {
+            0%{
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            50%{
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            }
+            100%{
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            }
             }
             @keyframes rotateReverseAnim {
-                0%{
-                    transform: rotate(0deg);
-                }
-                50%{
-                    transform: rotate(-180deg);
-                }
-                100%{
-                    transform: rotate(-360deg);
-                }
+            0%{
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            }
+            50%{
+            -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+            }
+            100%{
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+            }
             }
             .gear-1{
-                animation-name:rotateAnim;
-                animation-duration: 10s;
-                transform-origin:111px 146px;
+            -webkit-animation-name:rotateAnim;
+            animation-name:rotateAnim;
+            -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+            -webkit-transform-origin:111px 146px;
+            -ms-transform-origin:111px 146px;
+            transform-origin:111px 146px;
             }
             .gear-2{
-                animation-name:rotateReverseAnim;
-                animation-duration: 12.075471698113208s;
-                transform-origin:176px 81px;
+            -webkit-animation-name:rotateReverseAnim;
+            animation-name:rotateReverseAnim;
+            -webkit-animation-duration: 12.075471698113208s;
+            animation-duration: 12.075471698113208s;
+            -webkit-transform-origin:176px 81px;
+            -ms-transform-origin:176px 81px;
+            transform-origin:176px 81px;
             }
             .gear-3{
-                animation-name:rotateAnim;
-                animation-duration: 6.60377358490566s;
-                transform-origin:230px 165px;
+            -webkit-animation-name:rotateAnim;
+            animation-name:rotateAnim;
+            -webkit-animation-duration: 6.60377358490566s;
+            animation-duration: 6.60377358490566s;
+            -webkit-transform-origin:230px 165px;
+            -ms-transform-origin:230px 165px;
+            transform-origin:230px 165px;
 
             }
             .gear-4{
-                animation-name:rotateAnim;
-                animation-duration: 7.483018867924528s;
-                transform-origin:279px 91px;
+            -webkit-animation-name:rotateAnim;
+            animation-name:rotateAnim;
+            -webkit-animation-duration: 7.483018867924528s;
+            animation-duration: 7.483018867924528s;
+            -webkit-transform-origin:279px 91px;
+            -ms-transform-origin:279px 91px;
+            transform-origin:279px 91px;
             }
             .gear-5{
-                animation-name:rotateReverseAnim;
-                animation-duration: 9.433962264150944s;
-                transform-origin:318px 141px;
+            -webkit-animation-name:rotateReverseAnim;
+            animation-name:rotateReverseAnim;
+            -webkit-animation-duration: 9.433962264150944s;
+            animation-duration: 9.433962264150944s;
+            -webkit-transform-origin:318px 141px;
+            -ms-transform-origin:318px 141px;
+            transform-origin:318px 141px;
             }
             .gear-inner-1{
-                animation-name:rotateReverseAnim;
-                animation-duration:7.483018867924528s;
-                transform-origin:293px 77px;
+            -webkit-animation-name:rotateReverseAnim;
+            animation-name:rotateReverseAnim;
+            -webkit-animation-duration:7.483018867924528s;
+            animation-duration:7.483018867924528s;
+            -webkit-transform-origin:293px 77px;
+            -ms-transform-origin:293px 77px;
+            transform-origin:293px 77px;
             }
 
 

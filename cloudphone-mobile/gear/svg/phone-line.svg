@@ -3,82 +3,128 @@
     <defs>
         <style>
             .cls-1 {
-                stroke: #c0c9d3;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-                stroke-width: 2.5px;
-                fill: none;
-                fill-rule: evenodd;
+            stroke: #c0c9d3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2.5px;
+            fill: none;
+            fill-rule: evenodd;
             }
 
             .draw {
-                animation-timing-function: linear;
-                animation-iteration-count: 1;
-                animation-direction: normal;
-                animation-play-state: paused;
-                animation-fill-mode: forwards;
-                animation-duration: 2s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            -webkit-animation-direction: normal;
+            animation-direction: normal;
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
 
             }
 
             .draw:nth-child(1) {
-                stroke-dasharray: 1601.908447265625, 1601.908447265625;
-                stroke-dashoffset: 1601.908447265625;
-                animation-name: pathDraw1;
+            stroke-dasharray: 1601.908447265625, 1601.908447265625;
+            stroke-dashoffset: 1601.908447265625;
+            -webkit-animation-name: pathDraw1;
+            animation-name: pathDraw1;
+            }
+
+            @-webkit-keyframes pathDraw1 {
+            from {
+            stroke-dashoffset: 1601.908447265625;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             @keyframes pathDraw1 {
-                from {
-                    stroke-dashoffset: 1601.908447265625;
-                }
-                to {
-                    stroke-dashoffset: 0;
-                }
+            from {
+            stroke-dashoffset: 1601.908447265625;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             .draw:nth-child(2) {
-                stroke-dasharray: 1562.49951171875, 1562.49951171875;
-                stroke-dashoffset: 1562.49951171875;
-                animation-name: pathDraw2;
+            stroke-dasharray: 1562.49951171875, 1562.49951171875;
+            stroke-dashoffset: 1562.49951171875;
+            -webkit-animation-name: pathDraw2;
+            animation-name: pathDraw2;
+            }
+
+            @-webkit-keyframes pathDraw2 {
+            from {
+            stroke-dashoffset: 1562.49951171875;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             @keyframes pathDraw2 {
-                from {
-                    stroke-dashoffset: 1562.49951171875;
-                }
-                to {
-                    stroke-dashoffset: 0;
-                }
+            from {
+            stroke-dashoffset: 1562.49951171875;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             .draw:nth-child(3) {
-                stroke-dasharray: 1367.41357421875, 1367.41357421875;
-                stroke-dashoffset: 1367.41357421875;
-                animation-name: pathDraw3;
+            stroke-dasharray: 1367.41357421875, 1367.41357421875;
+            stroke-dashoffset: 1367.41357421875;
+            -webkit-animation-name: pathDraw3;
+            animation-name: pathDraw3;
+            }
+
+            @-webkit-keyframes pathDraw3 {
+            from {
+            stroke-dashoffset: 1367.41357421875;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             @keyframes pathDraw3 {
-                from {
-                    stroke-dashoffset: 1367.41357421875;
-                }
-                to {
-                    stroke-dashoffset: 0;
-                }
+            from {
+            stroke-dashoffset: 1367.41357421875;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             .draw:nth-child(4) {
-                stroke-dasharray: 383.3097839355469, 383.3097839355469;
-                stroke-dashoffset: 383.3097839355469;
-                animation-name: pathDraw4;
+            stroke-dasharray: 383.3097839355469, 383.3097839355469;
+            stroke-dashoffset: 383.3097839355469;
+            -webkit-animation-name: pathDraw4;
+            animation-name: pathDraw4;
+            }
+
+            @-webkit-keyframes pathDraw4 {
+            from {
+            stroke-dashoffset: 383.3097839355469;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
 
             @keyframes pathDraw4 {
-                from {
-                    stroke-dashoffset: 383.3097839355469;
-                }
-                to {
-                    stroke-dashoffset: 0;
-                }
+            from {
+            stroke-dashoffset: 383.3097839355469;
+            }
+            to {
+            stroke-dashoffset: 0;
+            }
             }
         </style>
     </defs>
