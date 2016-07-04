@@ -95,11 +95,7 @@
     MediaAnimation.prototype.scale = function () {
         //return; //TODO
         var fontSize;
-        if (this.isPortrait) {
-            fontSize = screen.width * this.fontSizeDefault / this.widthDefault;
-        } else {
-            fontSize = screen.height * this.fontSizeDefault / this.widthDefault;
-        }
+        fontSize = window.innerWidth * this.fontSizeDefault / this.widthDefault;
         this.element.style.fontSize = fontSize + 'px';
     };
 
