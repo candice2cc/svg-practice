@@ -48,13 +48,11 @@
     };
 
     GearAnimation.prototype.updateGear = function () {
-        //this.gearSVGs = this.element.getElementsByClassName('gear-item');
         this.gearSVGs = [].slice.call(this.element.getElementsByClassName('gear-item'));
         this.svgEls = this.svgEls.concat(this.gearSVGs);
     };
     GearAnimation.prototype.updateLine = function () {
         this.lineSVGs = [].slice.call(this.element.getElementsByClassName('cloud-line'));
-        //this.lineSVGs = this.element.getElementsByClassName('cloud-line');
         this.svgEls = this.svgEls.concat(this.lineSVGs);
 
     };
@@ -106,8 +104,8 @@
      */
     GearAnimation.prototype.enableAnimation = function () {
         var self = this;
-        //safari fix
-        if(isSafari){
+        //safari ,android4.x fix
+        if (isSafari || (androidVersion > 0 && androidVersion < 5)) {
             self.phonePlatSVG.getSVGDocument().getElementsByClassName('cls-safari-fix')[0].style.display = 'block';
         }
 
@@ -207,6 +205,15 @@
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
     var isSafari = u.indexOf('Safari') > -1 && u.indexOf('Chrome') <= -1;
+    //get androidVersion
+    var androidVersion = -1;
+    if (isAndroid) {
+        androidVersion = parseFloat(u.slice(u.indexOf('Android') + 8));
+        if (isNaN(androidVersion)) {
+            androidVersion = -1;
+        }
+    }
+
     // Expose MediaAnimation
     window[NAME] = GearAnimation;
 

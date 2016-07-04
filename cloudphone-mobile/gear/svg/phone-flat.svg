@@ -27,6 +27,7 @@
             .cls-safari-fix{
             display:none;
             transform:translate(0,2px);
+            -webkit-transform: translate(0,2px);
             fill: #000000;
             fill-opacity:0.1;
             }
