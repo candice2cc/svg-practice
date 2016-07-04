@@ -84,8 +84,7 @@
     /**
      * TODO
      */
-    MediaAnimation.prototype.disable = function(){
-
+    MediaAnimation.prototype.disable = function () {
 
 
     };
@@ -144,6 +143,9 @@
         }
         this.isPortrait = this.getScreenOrientation();
         this.scale();
+        if (isAndroid) {
+            location.reload(false);
+        }
 
     };
 
@@ -230,9 +232,6 @@
         return false;
     };
 
-
-    // Expose MediaAnimation
-    window[NAME] = MediaAnimation;
 
     /**
      * SVG模块
@@ -331,7 +330,7 @@
 
         //STATE
         this.clickPlayState = false;
-
+        this.realStartState = false;
 
         this.init();
     }
@@ -340,6 +339,7 @@
     VideoEl.prototype.init = function () {
         this.clickPlay = this.clickPlay.bind(this);
         this.timeUpdate = this.timeUpdate.bind(this);
+        this.videoEnded = this.videoEnded.bind(this);
         this.screen.addEventListener('click', this.clickPlay);
         this.replayEl.addEventListener('click', this.clickPlay);
 
@@ -353,9 +353,34 @@
         }
     };
 
+
+    /**
+     * android6.0以下不支持全屏，因此播放在PHONE SVG区域
+     */
+    VideoEl.prototype.realStartPlay = function () {
+        console.log('realStartPlay');
+        if (androidVersion <= 6.0 && androidVersion > 0) {
+            if (!this.realStartState) {
+                this.realStartState = true;
+                this.showVideo();
+            }
+
+        } else {
+            this.showReplay();
+        }
+
+        this.clickPlayState = false;
+    };
+
+    VideoEl.prototype.videoEnded = function (event) {
+        console.log('ended');
+        this.showReplay();
+    };
+
     VideoEl.prototype.clickPlay = function (event) {
-        if(!this.clickPlayState){
+        if (!this.clickPlayState) {
             this.clickPlayState = true;
+            this.realStartState = false;//初始化this.realStartState，不能在ended中设置，因为ended后timeupdate还会执行
             //开始缓冲
             this.showLoading();
             this.video.play();
@@ -363,25 +388,21 @@
 
     };
 
-    VideoEl.prototype.realStartPlay = function () {
-        console.log('realStartPlay');
-        this.showReplay();
-        this.clickPlayState = false;
-    };
     VideoEl.prototype.showLoading = function () {
-        if (this.replayEl.style.display !== 'none') {
-            this.replayEl.style.display = 'none';
-            this.loadingEl.style.display = 'block';
-        }
+        this.video.classList.remove('full');
+        this.replayEl.style.display = 'none';
+        this.loadingEl.style.display = 'block';
 
     };
     VideoEl.prototype.showReplay = function () {
-        if (this.replayEl.style.display !== 'block') {
-            this.replayEl.style.display = 'block';
-            this.loadingEl.style.display = 'none';
-        }
-
-
+        this.video.classList.remove('full');
+        this.replayEl.style.display = 'block';
+        this.loadingEl.style.display = 'none';
+    };
+    VideoEl.prototype.showVideo = function () {
+        this.video.classList.add('full');
+        this.replayEl.style.display = 'none';
+        this.loadingEl.style.display = 'none';
     };
 
     VideoEl.prototype.startVideo = function () {
@@ -389,10 +410,6 @@
             return;
         }
         this.videoStarted = true;
-        //视频占位图淡入
-        this.screen.classList.remove('m-fade-out');
-        this.screen.classList.add('m-fade-in');
-        this.showReplay();
 
 
         var parent = this.controlEl.parentElement;
@@ -408,6 +425,15 @@
         parent.insertBefore(video, this.controlEl);
         this.video = video;
         this.video.addEventListener('timeupdate', this.timeUpdate);
+        if (androidVersion <= 6.0 && androidVersion > 0) {
+            this.video.addEventListener('ended', this.videoEnded);
+        }
+
+        //视频占位图淡入
+        this.screen.classList.remove('m-fade-out');
+        this.screen.classList.add('m-fade-in');
+        this.showReplay();
+
     };
 
     window.requestAnimFrame = function () {
@@ -435,6 +461,22 @@
         }
         );
     }();
+
+
+    //get androidVersion
+    var ua = navigator.userAgent;
+    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
+    var androidVersion = -1;
+    if (isAndroid) {
+        androidVersion = parseFloat(ua.slice(ua.indexOf('Android') + 8));
+        if (isNaN(androidVersion)) {
+            androidVersion = -1;
+        }
+    }
+
+
+    // Expose MediaAnimation
+    window[NAME] = MediaAnimation;
 
 
 })(window, document);

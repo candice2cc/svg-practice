@@ -132,13 +132,23 @@
 }
 
 .video-container .screen {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
 }
 
 .video-container .video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 1px;
     height: 1px;
+}
+.video-container .video.full {
+    width: 100%;
+    height: auto;
 }
 
 .video-container .video-control {
@@ -157,7 +167,7 @@
 }
 
 /* RIGHT*/
-#mediaAnimation .video {
+#mediaAnimation .video.svg {
     right: 0.5em;
     top: 13.875em;
 }
@@ -180,155 +190,5 @@
 #mediaAnimation .shirt {
     top: 22.25em;
     right: 5.84375em;
-}
-
-#mediaAnimation2 .video-mp4 {
-    position: absolute;
-    width: 190px;
-    height: 354px;
-    left: 29.0625em;
-    top: 2.1875em;
-}
-
-#mediaAnimation2 .video-control {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-    left: 33.4375em;
-    bottom: 5.25em;
-
-}
-
-#mediaAnimation2 .video-control .replay {
-    cursor: pointer;
-}
-
-#mediaAnimation2 .video-control .replay,
-#mediaAnimation2 .video-control .loading {
-    display: none;
-}
-
-#mediaAnimation2 .letter {
-    position: absolute;
-    left: 4.625em;
-    top: 9.75em;
-}
-
-#mediaAnimation2 .newspaper {
-    position: absolute;
-    left: 19.625em;
-    top: 1.875em;
-}
-
-#mediaAnimation2 .bustop {
-    position: absolute;
-    left: 15.1875em;
-    top: 19.25em;
-}
-
-#mediaAnimation2 .outdoor {
-    position: absolute;
-    left: 21.5625em;
-    top: 9.4375em;
-}
-
-#mediaAnimation2 .msg {
-    position: absolute;
-    left: 15em;
-    top: 7.625em;
-}
-
-#mediaAnimation2 .cup {
-    position: absolute;
-    left: 8.75em;
-    top: 17.125em;
-}
-
-#mediaAnimation2 .video {
-    position: absolute;
-    top: 8.875em;
-    right: 13.5625em;
-}
-
-#mediaAnimation2 .speaker {
-    position: absolute;
-    top: 3.375em;
-    right: 19.75em;
-}
-
-#mediaAnimation2 .shirt {
-    position: absolute;
-    top: 6.5em;
-    right: 5.875em;
-}
-
-#mediaAnimation2 .mail {
-    position: absolute;
-    top: 14.625em;
-    right: 4.625em;
-}
-
-#mediaAnimation2 .tv {
-    position: absolute;
-    top: 19em;
-    right: 15.0em;
-}
-
-#mediaAnimation2 object.later {
-    visibility: hidden;
-}
-
-*
-*
-#mediaAnimation2 .scene {
-    position: relative;
-    width: 100%;
-    height: 26.75em;
-    top: 0;
-}
-
-#mediaAnimation2 .scene:nth-child(2) {
-    top: -26.75em;
-}
-
-#mediaAnimation2 .scene:nth-child(3) {
-    top: -53.5em;
-}
-
-#mediaAnimation2 .scene:nth-child(4) {
-    top: -80.25em;
-}
-
-#mediaAnimation2 .scene:nth-child(5) {
-    top: -107.0em;
-}
-
-#mediaAnimation2 .scene:nth-child(6) {
-    top: -133.75em;
-}
-
-#mediaAnimation2 .scene:nth-child(7) {
-    top: -160.5em;
-}
-
-#mediaAnimation2 .scene:nth-child(8) {
-    top: -187.25em;
-}
-
-#mediaAnimation2 .scene:nth-child(9) {
-    top: -214.0em;
-}
-
-#mediaAnimation2 .scene:nth-child(10) {
-    top: -240.75em;
-}
-
-#mediaAnimation2 .scene:nth-child(11) {
-    top: -267.5em;
-}
-
-#mediaAnimation2 .scene:nth-child(12) {
-    top: -294.25em;
 }
 
