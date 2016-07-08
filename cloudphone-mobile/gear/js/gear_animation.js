@@ -104,9 +104,9 @@
      */
     GearAnimation.prototype.enableAnimation = function () {
         var self = this;
-        //safari ,android4.x fix
-        if (isSafari || (androidVersion > 0 && androidVersion < 5)) {
-            self.phonePlatSVG.getSVGDocument().getElementsByClassName('cls-safari-fix')[0].style.display = 'block';
+        //非chrome ,android4.x以下版本 fix
+        if (!isChrome || (androidVersion > 0 && androidVersion < 5)) {
+            self.phonePlatSVG.getSVGDocument().getElementsByClassName('cls-filter-fix')[0].style.display = 'block';
         }
 
 
@@ -204,7 +204,7 @@
     };
     var u = navigator.userAgent;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    var isSafari = u.indexOf('Safari') > -1 || u.indexOf('AppleWebkit') <= -1;
+    var isChrome = u.indexOf('Chrome') > -1; //chrome以外的浏览器(safari firefox)不支持阴影使用的滤镜，因此区分
     //get androidVersion
     var androidVersion = -1;
     if (isAndroid) {

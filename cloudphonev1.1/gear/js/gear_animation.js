@@ -150,6 +150,11 @@
                 self.animate.apply(self, []);
             };
         } else {
+            //非chrome fix
+            if (!isChrome) {
+                this.phonePlatSVG.el.getSVGDocument().getElementsByClassName('cls-filter-fix')[0].style.display = 'block';
+            }
+
             this.element.style.opacity = '1';
             //齿轮转动
             this.gearSVG.forEach(function (gear, i) {
@@ -182,7 +187,8 @@
         }
 
     };
-
+    var u = navigator.userAgent;
+    var isChrome = u.indexOf('Chrome') > -1; //chrome以外的浏览器(safari firefox)不支持阴影使用的滤镜，因此区分
 
     // Expose GearAnimation
     window[NAME] = GearAnimation;
