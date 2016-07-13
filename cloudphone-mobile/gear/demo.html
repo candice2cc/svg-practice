@@ -10,8 +10,10 @@
             height: 2000px;
             margin: 0;
         }
+
         #screenGear {
             background: #f7f8fa;
+            text-align: center;
         }
 
     </style>
@@ -50,6 +52,7 @@
 
 </section>
 
+<script src="js/util.js"></script>
 <script src="js/gear_animation.js"></script>
 <script>
 
@@ -57,7 +60,18 @@
     var start = new Date();
     document.addEventListener("DOMContentLoaded", function (event) {
         console.log(new Date() - start);
-        new GearAnimation(document.getElementById('gearAnimation'));
+        var gear = new GearAnimation(document.getElementById('gearAnimation'));
+        var scaleWidth = 320;
+        var width = window.innerWidth;
+        if (width <= 480) {
+            scaleWidth = width;
+            document.getElementById('mediaAnimation').style.overflowX='hidden';
+        } else if (width > 480 && width <= 768) {
+            scaleWidth = width * 0.7;
+        } else if (width > 768) {
+            scaleWidth = 640;
+        }
+        gear.setScale(scaleWidth);
 
 
     });

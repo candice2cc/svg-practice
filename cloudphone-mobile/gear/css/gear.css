@@ -5,18 +5,19 @@
 }
 
 .g-fade.g-fade-in {
-    opacity: 1;!important;
+    opacity: 1 !important;
 }
 
 .g-fade.g-fade-out {
-    opacity: 0;!important;
+    opacity: 0 !important;
 }
 
 #gearAnimation {
+    display: inline-block;
     font-size: 16px;
     width: 22.5em;
     height: 22em;
-    overflow-x: hidden; /* 禁止横向滚动*/
+    /*overflow-x: hidden; *//* 禁止横向滚动*/
     position: relative;
 }
 
@@ -79,12 +80,13 @@
     top: 4em;
 }
 
-#gearAnimation .cloud-line-left{
+#gearAnimation .cloud-line-left {
     width: 8.5em;
     height: 7.72em;
 
 }
-#gearAnimation .cloud-line-right{
+
+#gearAnimation .cloud-line-right {
     width: 12em;
     height: 13.79em;
 }

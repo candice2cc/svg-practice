@@ -12,6 +12,7 @@
 
         #screenMedia {
             background: #f7f8fa;
+            text-align: center;
         }
 
     </style>
@@ -108,16 +109,27 @@
     </div>
 </section>
 <script src="js/parallax.min.js"></script>
+<script src="js/util.js"></script>
 <script src="js/media_animation.js"></script>
 <script>
-    //    noxSdk.onLoadSuccess();
 
     //加速
     var start = new Date();
     document.addEventListener("DOMContentLoaded", function (event) {
         console.log(new Date() - start);
-        new MediaAnimation(document.getElementById('mediaAnimation'));
+        var media = new MediaAnimation(document.getElementById('mediaAnimation'));
+        var scaleWidth = 320;
+        var width = window.innerWidth;
+        if (width <= 480) {
+            scaleWidth = width;
+            document.getElementById('mediaAnimation').style.overflowX='hidden';
+        } else if (width > 480 && width <= 768) {
+            scaleWidth = width * 0.7;
+        } else if (width > 768) {
+            scaleWidth = 640;
+        }
 
+        media.setScale(scaleWidth);
 
     });
 </script>

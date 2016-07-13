@@ -74,7 +74,7 @@
 
     MediaAnimation.prototype.initialise = function () {
         //set up
-        this.scale();
+        //this.scale();
 
         this.updateDrawSVG();
         this.updateVideo();
@@ -96,6 +96,12 @@
         //return; //TODO
         var fontSize;
         fontSize = window.innerWidth * this.fontSizeDefault / this.widthDefault;
+        this.element.style.fontSize = fontSize + 'px';
+    };
+
+    MediaAnimation.prototype.setScale = function(width){
+        var fontSize;
+        fontSize = width * this.fontSizeDefault / this.widthDefault;
         this.element.style.fontSize = fontSize + 'px';
     };
 
@@ -139,7 +145,8 @@
         }
         this.isPortrait = this.getScreenOrientation();
         this.scale();
-        if (isAndroid) {
+        //非Safari重新load
+        if (!browserInfo.isSafari) {
             location.reload(false);
         }
 
@@ -201,7 +208,7 @@
                 }
 
             });
-            window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", this.onDeviceOrientation);
+            //window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", this.onDeviceOrientation);
 
         }
 
@@ -459,16 +466,9 @@
     }();
 
 
-    //get androidVersion
-    var ua = navigator.userAgent;
-    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
-    var androidVersion = -1;
-    if (isAndroid) {
-        androidVersion = parseFloat(ua.slice(ua.indexOf('Android') + 8));
-        if (isNaN(androidVersion)) {
-            androidVersion = -1;
-        }
-    }
+    var mobileSystem = util.getMobileSystem();
+    var androidVersion = util.getAndroidVersion();
+    var browserInfo = util.getBrowserInfo();
 
 
     // Expose MediaAnimation

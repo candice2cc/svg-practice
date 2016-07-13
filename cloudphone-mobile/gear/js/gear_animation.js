@@ -92,12 +92,14 @@
                     });
                 }
             });
-            this.scale();
-            window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", this.onDeviceOrientation);
+            //this.scale();
+            //window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", this.onDeviceOrientation);
 
 
         }
     };
+
+
 
     /**
      * 开启动画
@@ -105,7 +107,7 @@
     GearAnimation.prototype.enableAnimation = function () {
         var self = this;
         //非chrome ,android4.x以下版本 fix
-        if (!isChrome || (androidVersion > 0 && androidVersion < 5)) {
+        if (!browserInfo.isChrome) {
             self.phonePlatSVG.getSVGDocument().getElementsByClassName('cls-filter-fix')[0].style.display = 'block';
         }
 
@@ -181,13 +183,20 @@
         this.element.style.fontSize = fontSize + 'px';
     };
 
+    GearAnimation.prototype.setScale = function(width){
+        var fontSize;
+        fontSize = width * this.fontSizeDefault / this.widthDefault;
+        this.element.style.fontSize = fontSize + 'px';
+    };
+
     GearAnimation.prototype.onDeviceOrientation = function () {
         if (this.isPortrait === this.getScreenOrientation()) {
             return;
         }
         this.isPortrait = this.getScreenOrientation();
         this.scale();
-        if (isAndroid) {
+        //非Safari重新load
+        if (!browserInfo.isSafari) {
             location.reload(false);
         }
 
@@ -202,20 +211,14 @@
             return false;
         }
     };
-    var u = navigator.userAgent;
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-    var isChrome = u.indexOf('Chrome') > -1; //chrome以外的浏览器(safari firefox)不支持阴影使用的滤镜，因此区分
-    //get androidVersion
-    var androidVersion = -1;
-    if (isAndroid) {
-        androidVersion = parseFloat(u.slice(u.indexOf('Android') + 8));
-        if (isNaN(androidVersion)) {
-            androidVersion = -1;
-        }
-    }
+    var mobileSystem = util.getMobileSystem();
+    var androidVersion = util.getAndroidVersion();
+    var browserInfo = util.getBrowserInfo();
+
 
     // Expose MediaAnimation
     window[NAME] = GearAnimation;
 
 
 })(window, document);
+
