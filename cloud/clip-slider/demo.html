@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>clip-slider</title>
+    <link type="text/css" rel="stylesheet" href="styles/clip-slider.css">
+    <style>
+        body {
+            background-color: #eeeeee;
+            margin: 0;
+        }
+        #Demo{
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+<div id="Demo">
+</div>
+
+<script src="../Snap.svg-0.4.1/dist/snap.svg.js"></script>
+<script src="../common/js/util.js"></script>
+<script src="scripts/clip-slider.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+//        var clipSlider = new ClipSlider(document.getElementById('Demo'),{
+//            imageArray:['images/game1.jpg','images/game2.jpg','images/img-3.jpg'],
+//            width: 720,
+//            height: 1280,
+//            cx: 360,
+//            cy: 1160,
+//            radius1: 0,
+//            radius2: 720,
+//        });
+
+        var clipSlider = new ClipSlider(document.getElementById('Demo'),{
+            imageArray:['images/game1.jpg','images/game2.jpg','images/img-3.jpg'],
+            width: 1280,
+            height: 720,
+            cx: 640,
+            cy: 600,
+            radius1: 0,
+            radius2: 1000,
+        });
+    });
+
+</script>
+</body>
+</html>

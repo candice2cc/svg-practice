@@ -1,0 +1,78 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Mixins
+// --------------------------------------------------
+
+// Slider
+// --------------------------------------------------
+
+.transparent{
+  opacity: 0 !important;
+}
+
+.c-fade {
+  -webkit-transition: opacity 400ms linear 0ms;
+  transition: opacity 400ms linear 0ms;
+  opacity: 0;
+}
+
+.c-fade-in {
+  opacity: 1 !important;
+}
+
+.c-fade-out {
+  opacity: 0 !important;
+}
+
+
+.clip-slider-wrapper {
+  display: block;
+  text-align: center;
+}
+
+.clip-slider {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  .slide-item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+  }
+  .slide-current {
+    position: relative;
+    opacity: 1;
+  }
+  .slide-next {
+    opacity: 1;
+    z-index: 1;
+  }
+  .svg-wrapper{
+    overflow: hidden;
+  }
+}
+
+//
+//.clip-origin{
+//  position: absolute;
+//  display: block;
+//  width: 100%;
+//  bottom: 20%;
+//  text-align: center;
+//  z-index: 3;
+//  img{
+//    display: inline-block;
+//    width: 15%;
+//    max-width: 96px;
+//    height: auto;
+//  }
+//}
