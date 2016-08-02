@@ -21,6 +21,7 @@ snap.svg
             cy: 408,
             radius1: 0,
             radius2: 580,
+            duration:1200
         });
 
         参数说明：
@@ -30,3 +31,4 @@ snap.svg
         cx：动画起始坐标x，相对于容器
         cy: 动画起始坐标y，相对于容器
         radius：动画发散圈起始半径和结束半径，结束半径建议覆盖整个容器范围
+        duration:动画duration
