@@ -5,6 +5,7 @@
     var NAME = 'OceanProgress';
     var DEFAULTS = {
         fillColor:'#1863d0', //进度默认填充色值
+        centerIcon:'cloud'
     };
 
     function OceanProgress(el,options){
@@ -22,15 +23,47 @@
         this.waterArray.forEach(function(item,i){
            item.setAttribute('y',self.yRand[i][0]);  //reset y
         });
+
+        //set fillColor
+        this.waterPath = this.el.getElementsByClassName('water-path')[0];
+        this.waterPath.style.fill = this.fillColor;
+
+        //set centerIcon
+        this.cloudIcon = document.getElementById('noxphone-cloud');
+        this.closeIcon = document.getElementById('noxphone-close');
+        this.switchCenterIcon(this.centerIcon);
+
+
     };
 
     /**
-     * 设置进度
+     * API设置进度
      * @param progress eg 80%:80
      */
     OceanProgress.prototype.setProgress = function(progress){
         this.progress = progress;
         this.updateWater();
+    };
+
+    /**
+     * API切换背景
+     */
+    OceanProgress.prototype.switchCenterIcon = function(centerIcon){
+        if(centerIcon === 'cloud'){
+            this.closeIcon.classList.remove('p-fade-in');
+            this.closeIcon.classList.add('p-fade-out');
+
+            this.cloudIcon.classList.add('p-fade-in');
+            this.cloudIcon.classList.remove('p-fade-out');
+
+        }else if(centerIcon === 'close'){
+            this.cloudIcon.classList.remove('p-fade-in');
+            this.cloudIcon.classList.add('p-fade-out');
+
+            this.closeIcon.classList.add('p-fade-in');
+            this.closeIcon.classList.remove('p-fade-out');
+        }
+
     };
 
     /**

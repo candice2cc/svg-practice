@@ -4,9 +4,9 @@
 - 依赖
 snap.svg
 - 文件
-scripts/clip-slider.js
-scripts/snap.svg-min.js
-styles/clip-slider.less
+<script src="../Snap.svg-0.4.1/dist/snap.svg.js"></script>
+<script src="../common/scripts/util.js"></script>
+<script src="scripts/clip-slider.js"></script>
 
 - demo
 
